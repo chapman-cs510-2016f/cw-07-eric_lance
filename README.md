@@ -39,7 +39,9 @@ Complete the following exercises, saving your solutions in the indicated files. 
 
 Analyze in this section what you found useful about this assignment in your own words. Include any lingering questions or comments that you may have.
 
-**CHANGEME**
+The examples of matplotlib code were very helpful for creating working plots and understanding how the syntax actually works.
+
+The Julia plots were very pretty. I had a lot of fun playing around with those.
 
 ## Honor Pledge
 

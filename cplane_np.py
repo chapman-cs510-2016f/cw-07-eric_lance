@@ -52,7 +52,7 @@ class ComplexPlaneNP(absc.AbsComplexPlane):
         For every point (x + y*1j) in self.plane, replace
         the point with the value self.f(x + y*1j). 
         """
-        planeArray = np.empty([self.xlen,self.ylen], dtype=complex)
+        planeArray = np.zeros([self.xlen,self.ylen])
         for xpos in range(self.xlen):
             for ypos in range(self.ylen):
                 #  compute the value at each of the coordinate points in the plane
@@ -114,7 +114,8 @@ class JuliaPlane(ComplexPlaneNP):
         the gray-scale into various color combinations.
         """
         plt.clf()
-        plt.imshow(abs(self.plane.as_matrix()), cmap=chosenmap, interpolation='bicubic', extent=(self.xmin, self.xmax, self.ymin, self.ymax))
+        plt.imshow(self.plane.as_matrix(), cmap=chosenmap, interpolation='bicubic', extent=(self.xmin, self.xmax, self.ymin, self.ymax))
+        plt.title( 'c = '+str(self.c) )
         plt.show()
 
     def set_f(self, c, max=100):
